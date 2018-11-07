@@ -50,7 +50,7 @@ You need to manually create an OAuth2 client in the mongo database:
 - Create a new `oauth2_client` collection
 - Create a new document based on the following template:
 
-```json
+```js
 {
     "_id": ObjectID(),
     "created_at": ISODate("2014-10-02T19:37:23.738Z"),
@@ -58,7 +58,7 @@ You need to manually create an OAuth2 client in the mongo database:
     "secret": "secret",
     "name": "name",
     "description": "description",
-    "organization": ObjectID("<previously created organization id>"),  // The id of your organization previous
+    "organization": ObjectID("<previously created organization id>"),
     "redirect_uris": [
         "http://localhost:5001/dgv/oauth/callback"
     ],
