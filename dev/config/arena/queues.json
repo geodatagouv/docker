@@ -1,0 +1,75 @@
+{
+  "queues": [
+    {
+      "host": "redis",
+      "hostId": "link-proxy",
+      "name": "check",
+      "port": 6379,
+      "prefix": "link-proxy"
+    },
+    {
+      "host": "redis",
+      "hostId": "link-proxy",
+      "name": "webhook",
+      "port": 6379,
+      "prefix": "link-proxy"
+    },
+
+    {
+      "host": "redis",
+      "hostId": "geoplatform",
+      "name": "consolidate-record",
+      "port": 6379,
+      "prefix": "geoplatform"
+    },
+    {
+      "host": "redis",
+      "hostId": "geoplatform",
+      "name": "elect-record",
+      "port": 6379,
+      "prefix": "geoplatform"
+    },
+    {
+      "host": "redis",
+      "hostId": "geoplatform",
+      "name": "incoming-webhook-link-proxy",
+      "port": 6379,
+      "prefix": "geoplatform"
+    },
+    {
+      "host": "redis",
+      "hostId": "geoplatform",
+      "name": "harvest-csw",
+      "port": 6379,
+      "prefix": "geoplatform"
+    },
+    {
+      "host": "redis",
+      "hostId": "geoplatform",
+      "name": "lookup-wfs",
+      "port": 6379,
+      "prefix": "geoplatform"
+    },
+    {
+      "host": "redis",
+      "hostId": "geoplatform",
+      "name": "compute-catalog-metrics",
+      "port": 6379,
+      "prefix": "geoplatform"
+    },
+    {
+      "host": "redis",
+      "hostId": "geoplatform",
+      "name": "udata-sync-one",
+      "port": 6379,
+      "prefix": "geoplatform"
+    },
+    {
+      "host": "redis",
+      "hostId": "geoplatform",
+      "name": "udata-sync-all",
+      "port": 6379,
+      "prefix": "geoplatform"
+    }
+  ]
+}
