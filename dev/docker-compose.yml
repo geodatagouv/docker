@@ -3,6 +3,7 @@ version: '3.3'
 networks:
   core:
     driver: bridge
+  udata: {}
 
 volumes:
   udata-fs: {}
@@ -63,21 +64,22 @@ services:
     ports:
       - 9000:9000
 
-  elasticsearch:
-    image: udata/elasticsearch
-    networks:
-      - core
-    volumes:
-      - elasticsearch-data:/usr/share/elasticsearch/data
-    ports:
-      - "9200:9200"
-
   udata:
-    image: udata/udata:1.5
+    image: udata/udata:1.6
     networks:
+      - udata
       - core
     volumes:
       - udata-fs:/udata/fs
       - ./config/udata/udata.cfg:/udata/udata.cfg
+    environment:
+      AUTHLIB_INSECURE_TRANSPORT: 1
     ports:
       - "7000:7000"
+
+  elasticsearch:
+    image: udata/elasticsearch
+    networks:
+      - udata
+    volumes:
+      - elasticsearch-data:/usr/share/elasticsearch/data
