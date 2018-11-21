@@ -18,6 +18,7 @@ services:
     volumes:
       - mongo-data:/data/db
     networks:
+      - udata
       - core
     ports:
       - 27017:27017
@@ -36,6 +37,7 @@ services:
     volumes:
       - redis-data:/data
     networks:
+      - udata
       - core
     ports:
       - 6379:6379
