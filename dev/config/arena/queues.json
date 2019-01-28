@@ -32,6 +32,13 @@
     {
       "host": "redis",
       "hostId": "geoplatform",
+      "name": "index-record",
+      "port": 6379,
+      "prefix": "geoplatform"
+    },
+    {
+      "host": "redis",
+      "hostId": "geoplatform",
       "name": "incoming-webhook-link-proxy",
       "port": 6379,
       "prefix": "geoplatform"
